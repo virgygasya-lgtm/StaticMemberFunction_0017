@@ -15,8 +15,7 @@ public:
 };
 
 angka::angka(int i){ // Constructor
-
-panjang = i;
+    panjang = i;
     arr = new int[i];
     isiData();
 }
@@ -26,12 +25,11 @@ angka::~angka(){ // Destructor
     cetakData();
     delete[] arr;
     cout << "Alamat Array Sudah Dilepaskan" << endl;
-
 }
 
 void angka::cetakData()
 {
-for (int i = 1; i <= panjang; i++)
+    for (int i = 1; i <= panjang; i++)
     {
         cout << i << " = " << arr[i] << endl;
     }
@@ -45,8 +43,9 @@ void angka::isiData()
         cin >> arr[i];
     }
     cout << endl;
+}
 
-    int main()
+int main()
 {
     angka belajarcpp(3);                    // Constructor Dipanggil
     angka *ptrBelajarcpp = new angka(5);    // Constructor Dipanggil
